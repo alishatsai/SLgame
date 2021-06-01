@@ -1,24 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SLgame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6a-Fp-Hjp">
+                                <rect key="frame" x="130" y="625" width="154" height="62"/>
+                                <state key="normal" image="die.face.1.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="60"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressDice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wz3-iU-49A"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyPusheen1" translatesAutoresizingMaskIntoConstraints="NO" id="ajp-l7-Ay2">
+                                <rect key="frame" x="85" y="584" width="244" height="218"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAa-f1-ftr">
+                                <rect key="frame" x="150" y="807" width="114" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Replay"/>
+                                <connections>
+                                    <action selector="rePlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ufw-fA-Fir"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulation!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tga-FE-HyS">
+                                <rect key="frame" x="80" y="524.5" width="254" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cryPusheen" translatesAutoresizingMaskIntoConstraints="NO" id="67S-6p-DDz">
+                                <rect key="frame" x="102" y="584" width="244" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tga-FE-HyS" secondAttribute="trailing" constant="80" id="17D-uN-HzD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ajp-l7-Ay2" secondAttribute="trailing" constant="85" id="3vo-4p-VRf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QAa-f1-ftr" secondAttribute="bottom" constant="30" id="7yF-ap-0f1"/>
+                            <constraint firstItem="ajp-l7-Ay2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="B8o-kB-DHE"/>
+                            <constraint firstItem="ajp-l7-Ay2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="540" id="Chl-0w-XR4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ajp-l7-Ay2" secondAttribute="bottom" constant="60" id="Eo9-Sg-EtF"/>
+                            <constraint firstItem="Y6a-Fp-Hjp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="Fd8-Pj-Z3G"/>
+                            <constraint firstItem="QAa-f1-ftr" firstAttribute="top" secondItem="Y6a-Fp-Hjp" secondAttribute="bottom" constant="120" id="KO7-Wn-WlG"/>
+                            <constraint firstItem="Tga-FE-HyS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="PW2-am-KPK"/>
+                            <constraint firstItem="ajp-l7-Ay2" firstAttribute="top" secondItem="Tga-FE-HyS" secondAttribute="bottom" constant="20" id="SyP-bz-ahP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y6a-Fp-Hjp" secondAttribute="trailing" constant="130" id="ViC-mE-iTR"/>
+                            <constraint firstItem="QAa-f1-ftr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="YZ6-W7-4yU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QAa-f1-ftr" secondAttribute="trailing" constant="150" id="ZQN-4q-b6L"/>
+                            <constraint firstItem="QAa-f1-ftr" firstAttribute="top" secondItem="ajp-l7-Ay2" secondAttribute="bottom" constant="5" id="buv-bJ-IHe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diceButton" destination="Y6a-Fp-Hjp" id="6pd-ks-mpS"/>
+                        <outlet property="messageLabel" destination="Tga-FE-HyS" id="QFr-xm-wea"/>
+                        <outlet property="messageLoseImageView" destination="67S-6p-DDz" id="QCi-Zq-Eee"/>
+                        <outlet property="messageWinImageView" destination="ajp-l7-Ay2" id="mBI-3s-Lfj"/>
+                        <outlet property="replayBtn" destination="QAa-f1-ftr" id="dDD-Ox-wWR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-213.04347826086959" y="52.901785714285715"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HappyPusheen1" width="480" height="480"/>
+        <image name="cryPusheen" width="259" height="224"/>
+        <image name="die.face.1.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
